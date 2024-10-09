@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numpad</title>
+    <meta name="theme-color" content="#1d1d1d">
+    <meta name="description" content="Offline-ready numpad application">
     <link rel="stylesheet" href="style.css">
+    <title>Numpad</title>
 </head>
 <body>
     <div class="numpad-container">
-        <input type="text" id="numpad-display" readonly>
+        <input type="text" id="numpad-display" readonly />
         <div class="numpad">
-            <button class="numpad-btn" data-value="1">1</button>
-            <button class="numpad-btn" data-value="2">2</button>
-            <button class="numpad-btn" data-value="3">3</button>
-            <button class="numpad-btn" data-value="4">4</button>
-            <button class="numpad-btn" data-value="5">5</button>
-            <button class="numpad-btn" data-value="6">6</button>
-            <button class="numpad-btn" data-value="7">7</button>
-            <button class="numpad-btn" data-value="8">8</button>
-            <button class="numpad-btn" data-value="9">9</button>
-            <button class="numpad-btn" data-value="0">0</button>
-            <button class="numpad-btn" id="clear">Clear</button>
-            <button class="numpad-btn" id="backspace">Backspace</button>
-            <button class="numpad-btn" id="enter">Enter</button>
+            <button class="numpad-btn" onclick="appendNumber('1')">1</button>
+            <button class="numpad-btn" onclick="appendNumber('2')">2</button>
+            <button class="numpad-btn" onclick="appendNumber('3')">3</button>
+            <button class="numpad-btn" onclick="appendNumber('4')">4</button>
+            <button class="numpad-btn" onclick="appendNumber('5')">5</button>
+            <button class="numpad-btn" onclick="appendNumber('6')">6</button>
+            <button class="numpad-btn" onclick="appendNumber('7')">7</button>
+            <button class="numpad-btn" onclick="appendNumber('8')">8</button>
+            <button class="numpad-btn" onclick="appendNumber('9')">9</button>
+            <button class="numpad-btn" onclick="appendNumber('0')">0</button>
+            
+            <!-- Clear, Backspace, and Enter buttons in a grid layout -->
+            <button class="numpad-btn" id="clear" onclick="clearDisplay()">Clear</button>
+            <button class="numpad-btn" id="backspace" onclick="backspace()">Backspace</button>
+            <button class="numpad-btn" id="enter" onclick="submit()">Enter</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
