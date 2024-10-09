@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1d1d1d;
+}
+
+.numpad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;  /* Limit maximum width */
+}
+
+#numpad-display {
+    width: 100%;
+    height: 10vh;
+    font-size: 5vh;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.numpad-btn {
+    padding: 5vh;
+    font-size: 5vh;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    touch-action: manipulation;
+}
+
+.numpad-btn:hover {
+    background-color: #ccc;
+}
+
+#clear, #backspace, #enter {
+    grid-column: span 3;
+}
+
+/* Ensure the numpad fits well on different screen sizes */
+@media (max-width: 600px) {
+    #numpad-display {
+        font-size: 4vh;
+    }
+    
+    .numpad-btn {
+        padding: 4vh;
+        font-size: 4vh;
+    }
+}
+
+@media (max-width: 400px) {
+    #numpad-display {
+        font-size: 3vh;
+    }
+    
+    .numpad-btn {
+        padding: 3vh;
+        font-size: 3vh;
+    }
+}
