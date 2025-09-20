@@ -6,8 +6,7 @@ const assets = [
     './index.html',
     './style.css',
     './script.js',
-    './favicon-16x16.png',
-    './favicon.ico',
+    'https://awoo-co.github.io/cdn/favicon.ico',
     './README.md',
 ];
 
